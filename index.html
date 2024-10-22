@@ -75,5 +75,26 @@
     <footer>
         <p>&copy; 2024 Ajit Shankar Pawar. All rights reserved.</p>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll("section"); // Select all sections
+        
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible"); // Add visible class when section is in view
+                        observer.unobserve(entry.target); // Stop observing after adding class
+                    }
+                });
+            }, {
+                threshold: 0.1 // Trigger when 10% of the section is in view
+            });
+        
+            sections.forEach(section => {
+                section.classList.add("section"); // Add section class for styling
+                observer.observe(section); // Start observing each section
+            });
+        });
+        </script>        
 </body>
 </html>
