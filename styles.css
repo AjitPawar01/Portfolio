@@ -44,7 +44,7 @@ header {
 section {
     padding: 20px;
     margin: 10px;
-    background: #fff;
+    background: black;
     border-radius: 5px;
 }
 
@@ -66,14 +66,49 @@ footer {
 header {
     position: relative; /* Allows positioning of child elements */
     padding: 20px; /* Adjust padding as needed */
-    margin: 10px;
+    margin: 30px;
+    border-radius: 10px;
     background-image: url('https://cdn.dribbble.com/users/1792975/screenshots/5655046/media/b3b8751f51736304156d9c2c84cb9bc9.gif');
     background-size: cover; /* Cover the entire header */
     background-position: center; /* Center the background */
     height: 300px; /* Set a fixed height for the header */
     color: rgb(0, 0, 0); /* Text color */
     overflow: hidden; /* Prevent overflow */
+    animation: fadeInHeader 2s ease-in-out; /* Apply animation */
 }
+
+@keyframes fadeInHeader {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px); /* Start from above */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at original position */
+    }
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: cyan; /* Set headline text color to cyan */
+    opacity: 1; /* Initial opacity */
+    animation: fadeInText 1s ease-in-out forwards; /* Fade in text animation */
+    animation-delay: 0.5s; /* Delay for better effect */
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0; /* Start invisible */
+        transform: translateY(-10px); /* Move slightly up */
+    }
+    100% {
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* Back to original position */
+    }
+}
+
 
 
 .profile-photo {
@@ -172,35 +207,113 @@ h1 {
     margin-left: 20px; /* Add margin to list items for better visibility */
 }
 
+/* Adjusted setup for the Contact Me section */
 #contact {
-    background-image: url('https://cdn.dribbble.com/users/330915/screenshots/11370887/media/c1efe43ef43be1021f7793c7a5706bd4.gif');
-    background-size: cover; /* Ensure the image covers the entire background */
-    background-position: center; /* Center the background image */
-    color: white; /* Adjust text color for better visibility */
-    padding: 40px; /* Add some padding */
-    border-radius: 5px; /* Optional: Add rounded corners */
-    position: relative; /* Set positioning to control any inner elements */
+    position: relative;
+    overflow: hidden;
+    height: 60vh; /* Smaller height */
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
-#contact h2, #contact p {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow to make text stand out */
+/* Animate the background sliding in from the left */
+#contact::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    background-image: url('https://cdn.dribbble.com/users/330915/screenshots/11370887/media/c1efe43ef43be1021f7793c7a5706bd4.gif'); /* Your background image */
+    background-size: cover; /* Smaller background size */
+    background-position: center;
+    background-repeat: no-repeat; /* Prevent background repeat */
+    animation: slideInBackground 2s forwards; /* Adjust timing */
 }
 
+/* Animate the text sliding in from the top */
+#contact h2,
+#contact p,
 #contact ul {
-    list-style-type: none;
-    padding: 30px;
+    position: relative;
+    opacity: 0;
+    animation: slideInText 2s forwards;
+    animation-delay: 1s; /* Delay for background animation */
 }
 
-#contact ul li {
-    display: inline-block;
-    margin: 40px;
+/* Keyframes for background sliding in from the left */
+@keyframes slideInBackground {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 0;
+    }
 }
 
-#contact ul li a img {
-    width: 40px; /* Resize icons if needed */
-    transition: transform 0.3s ease; /* Add smooth hover effect */
+/* Keyframes for text sliding in from the top */
+@keyframes slideInText {
+    0% {
+        top: -50px;
+        opacity: 0;
+    }
+    100% {
+        top: 0;
+        opacity: 1;
+    }
 }
 
-#contact ul li a img:hover {
-    transform: scale(1.2); /* Slightly enlarge the icons on hover */
+#projects {
+    background-image: url('https://cdn.dribbble.com/users/330915/screenshots/3587000/media/343cb53c87e313181d99248d3071bc77.gif');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    margin: 30px;
+    color: black; /* Adjust the text color to improve readability if needed */
+    opacity: 0; /* Start with opacity 0 */
+    animation: slideInText 2s forwards; /* Add animation for the text */
+    animation-delay: 1s; /* Delay to sync with the background */
+}
+
+/* Keyframes for text sliding in from the top */
+@keyframes slideInText {
+    0% {
+        top: -50px;
+        opacity: 0;
+    }
+    100% {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+#projects h2, #projects p, #projects ul {
+    opacity: 0; /* Initial opacity */
+    animation: fadeIn 1s forwards; /* Apply fade-in animation */
+    animation-delay: 1s; /* Delay for text appearance */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Start from below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at original position */
+    }
+}
+
+/* Initially hide sections */
+.section {
+    opacity: 0;
+    transform: translateY(1px); /* Start slightly below */
+    transition: opacity 2s ease, transform 2s ease;
+}
+
+/* Add a class for visible sections */
+.section.visible {
+    opacity: 1;
+    transform: translateY(0); /* Move to original position */
 }
