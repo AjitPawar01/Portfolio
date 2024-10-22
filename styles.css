@@ -66,6 +66,7 @@ footer {
 header {
     position: relative; /* Allows positioning of child elements */
     padding: 20px; /* Adjust padding as needed */
+    margin: 10px;
     background-image: url('https://cdn.dribbble.com/users/1792975/screenshots/5655046/media/b3b8751f51736304156d9c2c84cb9bc9.gif');
     background-size: cover; /* Cover the entire header */
     background-position: center; /* Center the background */
@@ -169,4 +170,37 @@ h1 {
 
 #about ul li {
     margin-left: 20px; /* Add margin to list items for better visibility */
+}
+
+#contact {
+    background-image: url('https://cdn.dribbble.com/users/346181/screenshots/3392825/media/b52aa26e4da33b702512f8edf452365b.gif');
+    background-size: cover; /* Ensure the image covers the entire background */
+    background-position: center; /* Center the background image */
+    color: white; /* Adjust text color for better visibility */
+    padding: 40px; /* Add some padding */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    position: relative; /* Set positioning to control any inner elements */
+}
+
+#contact h2, #contact p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow to make text stand out */
+}
+
+#contact ul {
+    list-style-type: none;
+    padding: 30px;
+}
+
+#contact ul li {
+    display: inline-block;
+    margin: 40px;
+}
+
+#contact ul li a img {
+    width: 40px; /* Resize icons if needed */
+    transition: transform 0.3s ease; /* Add smooth hover effect */
+}
+
+#contact ul li a img:hover {
+    transform: scale(1.2); /* Slightly enlarge the icons on hover */
 }
