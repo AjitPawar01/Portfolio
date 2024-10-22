@@ -135,3 +135,38 @@ h1 {
     margin-bottom: 10px;
     color: cyan; /* Set headline text color to chartreuse */
 }
+
+#about {
+    background-image: url('https://cdn.dribbble.com/users/244516/screenshots/3332372/media/7320d4756776fffdc004d84afd88598a.gif');
+    background-size: auto; /* Make sure the background covers the entire section */
+    background-position: right; /* Center the background */
+    padding: 100px; /* Maintain padding */
+    margin: 30px; /* Maintain margin */
+    color: black; 
+    border-radius: 5px; /* Maintain rounded corners */
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Start from below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at original position */
+    }
+}
+
+#about {
+    animation: fadeIn 2s ease-in-out; /* Apply animation to the #about section */
+}
+
+#about h2, #about p, #about ul {
+    animation: fadeIn 1s ease-in-out; /* Apply animation to the heading, paragraph, and list */
+    opacity: 0; /* Set initial opacity to 0 */
+    animation-fill-mode: forwards; /* Keep the final state of the animation */
+    animation-delay: 0.5s; /* Delay the animation for a better effect */
+}
+
+#about ul li {
+    margin-left: 20px; /* Add margin to list items for better visibility */
+}
