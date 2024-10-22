@@ -41,8 +41,6 @@ header {
     transform: scale(1.1); /* Slightly enlarge the link on hover */
 }
 
-
-
 section {
     padding: 20px;
     margin: 10px;
@@ -76,21 +74,64 @@ header {
     overflow: hidden; /* Prevent overflow */
 }
 
+
+.profile-photo {
+    position: absolute;
+    bottom: 80px;
+    right: 20px;
+    width: 230px;
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid aqua; /* Initial border */
+    box-shadow: 0 0 0 10px rgba(0, 255, 255, 0.3); /* Initial shadow for a circular glow effect */
+    animation: border-animation 3s infinite linear; /* Apply the animation */
+}
+@keyframes border-animation {
+    0% {
+        box-shadow: 0 0 0 10px rgba(0, 255, 255, 0.3), 0 0 0 20px rgba(0, 255, 255, 0.1);
+    }
+    50% {
+        box-shadow: 0 0 0 20px rgba(0, 255, 255, 0.1), 0 0 0 30px rgba(0, 255, 255, 0.05);
+    }
+    100% {
+        box-shadow: 0 0 0 10px rgba(0, 255, 255, 0.3), 0 0 0 20px rgba(0, 255, 255, 0.1);
+    }
+}
+
 .download-button {
-    position: absolute; /* Positioning it absolutely */
-    bottom: 10px; /* Adjust to position vertically */
-    right: 10px; /* Adjust to position horizontally */
+    position: absolute;
+    bottom: 15px;
+    right: 45px;
     display: inline-block;
     padding: 10px 20px;
-    background-color: rgba(235, 195, 86, 0.8); /* Semi-transparent background */
+    background-color: rgba(235, 195, 86, 0.8);
     color: white;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .download-button:hover {
-    background-color: rgba(69, 160, 73, 0.8); /* Darker shade on hover */
-    transform: scale(1.05); /* Slightly enlarge the button on hover */
+    background-color: rgba(69, 160, 73, 0.8);
+    transform: scale(1.05);
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    font-size: 3rem;
+    animation: slideIn 3s ease-in-out;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: cyan; /* Set headline text color to chartreuse */
 }
