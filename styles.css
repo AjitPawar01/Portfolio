@@ -8,30 +8,40 @@ body {
 
 header {
     font-family: cursive,'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background: #333;
-    color: #ffffff;
+    background: slategrey;
+    color: black;
     padding: 10px 0;
     text-align: center;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
+.navbar {
+    position: absolute; /* Position it within the header */
+    top: 20px; /* Adjust as needed */
+    left: 20px; /* Position on the left side */
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+.navbar ul {
+    list-style: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
+.navbar li {
+    margin: 10px 0; /* Space between links */
 }
-.navbar ul li:hover{
-    background-color: cyan;
-    transition: 5s;
+
+.navbar a {
+    text-decoration: none; /* Remove underline */
+    color: black; /* Link color */
+    font-weight: bold; /* Bold text */
+    transition: color 0.3s, transform 0.3s; /* Smooth transition for color and scaling */
 }
+
+.navbar a:hover {
+    color: #45a049; /* Darker color on hover */
+    transform: scale(1.1); /* Slightly enlarge the link on hover */
+}
+
+
 
 section {
     padding: 20px;
@@ -51,6 +61,36 @@ footer {
     list-style-type: none;
 }
 #about:hover,#projects:hover{
-    background-color: rgb(157, 184, 175);
+    background-color: rgb(255, 255, 255);
     transition: 2s;
+}
+
+header {
+    position: relative; /* Allows positioning of child elements */
+    padding: 20px; /* Adjust padding as needed */
+    background-image: url('https://cdn.dribbble.com/users/1792975/screenshots/5655046/media/b3b8751f51736304156d9c2c84cb9bc9.gif');
+    background-size: cover; /* Cover the entire header */
+    background-position: center; /* Center the background */
+    height: 300px; /* Set a fixed height for the header */
+    color: rgb(0, 0, 0); /* Text color */
+    overflow: hidden; /* Prevent overflow */
+}
+
+.download-button {
+    position: absolute; /* Positioning it absolutely */
+    bottom: 10px; /* Adjust to position vertically */
+    right: 10px; /* Adjust to position horizontally */
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgba(235, 195, 86, 0.8); /* Semi-transparent background */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.download-button:hover {
+    background-color: rgba(69, 160, 73, 0.8); /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
 }
