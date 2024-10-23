@@ -11,13 +11,11 @@ body {
     background-attachment: fixed; /* Fix the background image */
 }
 
-
-
 header {
     font-family: cursive,'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background: slategrey;
     color: black;
-    padding: 10px 0;
+    padding: 20px;
     text-align: center;
 }
 
@@ -73,7 +71,7 @@ footer {
 header {
     position: relative; /* Allows positioning of child elements */
     padding: 20px; /* Adjust padding as needed */
-    margin: 30px;
+    margin: 10px;
     border-radius: 10px;
     background-image: url('https://cdn.dribbble.com/users/1792975/screenshots/5655046/media/b3b8751f51736304156d9c2c84cb9bc9.gif');
     background-size: cover; /* Cover the entire header */
@@ -115,8 +113,6 @@ h1 {
         transform: translateY(0); /* Back to original position */
     }
 }
-
-
 
 .profile-photo {
     position: absolute;
@@ -180,14 +176,15 @@ h1 {
 }
 
 #about {
-    background-image: url('https://cdn.dribbble.com/users/244516/screenshots/3332372/media/7320d4756776fffdc004d84afd88598a.gif');
-    background-size: auto; /* Make sure the background covers the entire section */
-    background-position: right; /* Center the background */
-    padding: 100px; /* Maintain padding */
-    margin: 30px; /* Maintain margin */
+    background-color: #fff; /* Optionally set a solid background color */
+    background-size: auto; /* You can keep this if you want */
+    background-position: right; /* This can be removed if no background */
+    padding: 20px; /* Keep as needed */
+    margin: 10px; /* Keep as needed */
     color: black; 
     border-radius: 5px; /* Maintain rounded corners */
 }
+
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -200,7 +197,7 @@ h1 {
 }
 
 #about {
-    animation: fadeIn 2s ease-in-out; /* Apply animation to the #about section */
+    animation: fadeIn 3s ease-in-out; /* Apply animation to the #about section */
 }
 
 #about h2, #about p, #about ul {
@@ -211,7 +208,7 @@ h1 {
 }
 
 #about ul li {
-    margin-left: 20px; /* Add margin to list items for better visibility */
+    margin-left: 10px; /* Add margin to list items for better visibility */
 }
 
 /* Adjusted setup for the Contact Me section */
@@ -219,8 +216,8 @@ h1 {
     position: relative;
     overflow: hidden;
     height: 60vh; /* Smaller height */
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 /* Animate the background sliding in from the left */
@@ -231,7 +228,7 @@ h1 {
     left: -100%;
     width: 100%;
     height: 100%;
-    padding: 40px;
+    padding: 20px;
     background-image: url('https://cdn.dribbble.com/users/330915/screenshots/11370887/media/c1efe43ef43be1021f7793c7a5706bd4.gif'); /* Your background image */
     background-size: cover; /* Smaller background size */
     background-position: center;
@@ -276,7 +273,7 @@ h1 {
     background-size: cover;
     background-position: center;
     padding: 20px;
-    margin: 30px;
+    margin: 10px;
     color: black; /* Adjust the text color to improve readability if needed */
     opacity: 0; /* Start with opacity 0 */
     animation: slideInText 2s forwards; /* Add animation for the text */
@@ -323,4 +320,110 @@ h1 {
 .section.visible {
     opacity: 1;
     transform: translateY(0); /* Move to original position */
+}
+
+#skills {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+#skills h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: cyan;
+    animation: slideInText 2s ease-in-out;
+}
+
+#skills ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#skills ul li {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInText {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* For larger displays */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: cursive, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: slategrey;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    background-image: url('https://cdn.dribbble.com/users/1792975/screenshots/5655046/media/b3b8751f51736304156d9c2c84cb9bc9.gif'); /* Ensure the image shows */
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    color: rgb(0, 0, 0);
+    overflow: hidden;
+    transition: all 1s ease-in-out;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+    header {
+        height: auto; /* Adjust height */
+        margin: 10px 10px; /* Reduce margins for smaller screens */
+        padding: 15px;
+    }
+
+    .navbar {
+        position: relative; /* Adjust navbar positioning */
+        margin-top: 15px; /* Add space */
+        left: -100px; /* Center it */
+    }
+
+    .profile-photo {
+        width: 130px; /* Reduce size for smaller displays */
+        bottom: 50px; /* Adjust position */
+        right: 30px;
+    }
+
+    .download-button {
+        bottom: 10px;
+        right: 30px;
+        font-size: 0.8rem; /* Reduce button size */
+        padding: 4px 8px;
+    }
+
+    h1 {
+        font-size: 2rem; /* Adjust font size */
+    }
 }
