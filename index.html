@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div id="content">
     <header>
         <h1 class="headline">Hello, I'm<br>Ajit Shankar Pawar</h1>
         <nav class="navbar">    
@@ -52,12 +53,14 @@
             <h3>Gene Topology (ICPC Problem Statement)</h3>
             <p>
                 <ul>
-                    <li>Developed a program for the International Cell Processing Company (ICPC) to analyze and 
-                        simplify genetic sequences, represented as strings of nucleotides (A, C, G, T).</li>
-                    <li>Utilized a process called Genetically Optimized Organic Folding (GOOF) to reduce genetic 
-                        sequence length while preserving key properties for further analysis.</li>
-                    <li>Automated the process of finding folding points in sequences and applying transformations 
-                        to optimize the sequences, significantly reducing manual efforts and time consumption.</li>
+                    <li>Developed a simulation for the Instant Cartographic Positioning Company (ICPC) to help a subject identify their exact location in a 2D Cartesian grid without GPS.</li>
+                    <li>Designed an efficient algorithm that follows a spiral exploration pattern, allowing the subject to explore the grid and locate markers.</li>
+                    <li>Optimized the algorithm to minimize the number of steps needed for the subject to accurately pinpoint their position.</li>
+                    <li>Focused on reducing computational complexity and improving real-time decision-making during the location discovery process.</li>
+                    <li>Demonstrated strong problem-solving and algorithm design skills, effectively enhancing the process of GPS-free location determination.</li>
+                    <li>Simulated real-world scenarios where GPS technology is unavailable, offering solutions for spatial reasoning and efficient location identification.</li>
+                    <li>Implemented error handling and edge-case considerations to ensure the simulation works under varying grid conditions and marker distributions.</li>
+                    <li>Documented the algorithm comprehensively, ensuring clarity for future development, testing, and optimizations.</li>
                 </ul>
             </p>
         </div>
@@ -65,11 +68,15 @@
             <h3>IOT Auto Temperature Scan Entry System</h3>
             <p>
                 <ul>
-                    <li>The IoT Auto Temperature Scan Entry System is designed to provide a seamless and 
-                        automated solution for monitoring and controlling access to buildings based on individuals' 
-                        body temperature. </li>
-                    <li>The system aims to enhance security, improve health safety protocols, and 
-                        streamline entry procedures in various environments.</li>
+                   <li><b>Automated Temperature Screening:</b> Developed an IoT-based system that uses infrared or thermal sensors to measure body temperature at entry points without physical contact.</li>
+                   <li><b>Real-Time Data Processing:</b> Implemented IoT-enabled devices to process temperature readings instantly, ensuring immediate decision-making and access control.</li>
+                   <li><b>Integration with Access Control:</b> Integrated temperature scanning with automated access systems such as electronic locks and turnstiles, allowing or denying entry based on the temperature reading.</li>
+                   <li><b>Alerts and Notifications:</b> Configured the system to send real-time alerts to security personnel when abnormal temperature readings are detected.</li>
+                   <li><b>System Components:</b> The project involved the use of temperature sensors, IoT gateways for data transmission, and a cloud platform for real-time data analysis.</li>
+                   <li><b>Efficiency and Scalability:</b> The system was designed to improve entry efficiency by automating temperature checks and can scale to accommodate various facility sizes and traffic levels.</li>
+                   <li><b>Security and Privacy:</b> Ensured data security with encryption of transmissions and secure user account management.</li>
+                   <li><b>Performance Optimization:</b> The system guarantees minimal response time and high uptime (99.9%) to provide smooth operation.</li>
+                   <li><b>User Interfaces:</b> Developed user-friendly interfaces for end-users, security personnel, and administrators, providing real-time monitoring, alert management, and system configuration options.</li>
                 </ul>
             </p>
         </div>
@@ -108,6 +115,23 @@
                 observer.observe(section); // Start observing each section
             });
         });
-        </script>        
+
+        document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent default link behavior
+        const targetUrl = this.getAttribute('href');
+
+        // Add fade-out class
+        document.getElementById('content').classList.add('fade-out');
+
+        // Wait for the transition to finish
+        setTimeout(() => {
+            window.location.href = targetUrl; // Redirect after fade-out
+        }, 500); // Match this duration with your CSS transition duration
+    });
+});
+
+        </script>  
+    </div>      
 </body>
 </html>
