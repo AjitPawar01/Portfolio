@@ -2,136 +2,252 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ajit Shankar Pawar</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Personal Portfolio Website HTML CSS and JavaScript only</title>
     <link rel="stylesheet" href="styles.css">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-<body>
-    <div id="content">
-    <header>
-        <h1 class="headline">Hello, I'm<br>Ajit Shankar Pawar</h1>
-        <nav class="navbar">    
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        
-        <img src="MyPhoto.png" alt="Your Photo" class="profile-photo">
-        
-        <a href="https://drive.google.com/drive/folders/14ksG8Aq36_gTyljw0Ew-V0MccdAk-8ET?usp=drive_link" class="download-button" download>Download Resume</a>
-    </header>
-    
-    <section id="about">
-        <h2>About Me</h2>
-        <p><b>ACHIEVEMENTS & HOBBIES</b><br>
-            <ul>
-                <li>Passionate about reading and staying updated on defense news.</li>
-                <li>Avid sports enthusiast with a deep interest in global military affairs and defense technology.</li>
-                <li>Strong passion for Technology and emerging tech trends</li>
-            </ul>
-        </p>
-    </section>
-    <section id="skills">
-        <h2>My Skills</h2>
-        <ul>
-            <li>HTML/CSS</li>
-            <li>Core JAVA</li>
-            <li>Python</li>
-            <li>C Programming</li>
-            <li>C++ Programming</li>
-            <li>Git/GitHub</li>
-        </ul>
-    </section>
-    
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Gene Topology (ICPC Problem Statement)</h3>
-            <p>
-                <ul>
-                    <li>Developed a simulation for the Instant Cartographic Positioning Company (ICPC) to help a subject identify their exact location in a 2D Cartesian grid without GPS.</li>
-                    <li>Designed an efficient algorithm that follows a spiral exploration pattern, allowing the subject to explore the grid and locate markers.</li>
-                    <li>Optimized the algorithm to minimize the number of steps needed for the subject to accurately pinpoint their position.</li>
-                    <li>Focused on reducing computational complexity and improving real-time decision-making during the location discovery process.</li>
-                    <li>Demonstrated strong problem-solving and algorithm design skills, effectively enhancing the process of GPS-free location determination.</li>
-                    <li>Simulated real-world scenarios where GPS technology is unavailable, offering solutions for spatial reasoning and efficient location identification.</li>
-                    <li>Implemented error handling and edge-case considerations to ensure the simulation works under varying grid conditions and marker distributions.</li>
-                    <li>Documented the algorithm comprehensively, ensuring clarity for future development, testing, and optimizations.</li>
-                </ul>
-            </p>
+    <body>
+        <header class="header" id="header">
+            <a href="#" class="logo">Ajit Pawar.<span class="animate" style="--i:1;"></span></a>
+
+            <div class="bx bx-menu" id="menu-icon"><span class="animate" style="--i:2;"></span></div>
+
+            <nav class="navbar">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#education">Education</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+
+                <span class="active-nav"></span>
+                <span class="animate" style="--i:2;"></span>
+            </nav>
+        </header>
+        <section class="home" id="home">
+            <div class="home-content" id="home-content">
+                <h1>Hi, I'm <span>Ajit Pawar</span></h1>
+                <div class="text-animate" id="text-animate">
+                    <h3>Software Engineer</h3>
+                </div>
+
+                <p>Passionate about reading and staying updated on defense news.Avoid politics,a deep interest in global military affairs and defense technology.Strong passion for Technology and emerging tech trends.</p>
+                <div class="btn-box">
+                    <a href="#">Hire me</a>
+                    <a href="mailto:pawarajit734@gmail.com">Let's Talk</a>
+                </div>
+            </div>
+
+            <div class="home-image">
+                <img src="MyPhoto.png" alt="Personal Image">
+            </div>
+            
+        <div class="home-sci">
+            <a href="https://www.linkedin.com/in/ajit-pawar-3a1854257"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://drive.google.com/drive/folders/14ksG8Aq36_gTyljw0Ew-V0MccdAk-8ET?usp=drive_link"><i class='bx bxs-download'></i></a>
+            <a href="https://github.com/AjitPawar01"><i class='bx bxl-github' ></i></a>
         </div>
-        <div class="project">
-            <h3>IOT Auto Temperature Scan Entry System</h3>
-            <p>
-                <ul>
-                   <li><b>Automated Temperature Screening:</b> Developed an IoT-based system that uses infrared or thermal sensors to measure body temperature at entry points without physical contact.</li>
-                   <li><b>Real-Time Data Processing:</b> Implemented IoT-enabled devices to process temperature readings instantly, ensuring immediate decision-making and access control.</li>
-                   <li><b>Integration with Access Control:</b> Integrated temperature scanning with automated access systems such as electronic locks and turnstiles, allowing or denying entry based on the temperature reading.</li>
-                   <li><b>Alerts and Notifications:</b> Configured the system to send real-time alerts to security personnel when abnormal temperature readings are detected.</li>
-                   <li><b>System Components:</b> The project involved the use of temperature sensors, IoT gateways for data transmission, and a cloud platform for real-time data analysis.</li>
-                   <li><b>Efficiency and Scalability:</b> The system was designed to improve entry efficiency by automating temperature checks and can scale to accommodate various facility sizes and traffic levels.</li>
-                   <li><b>Security and Privacy:</b> Ensured data security with encryption of transmissions and secure user account management.</li>
-                   <li><b>Performance Optimization:</b> The system guarantees minimal response time and high uptime (99.9%) to provide smooth operation.</li>
-                   <li><b>User Interfaces:</b> Developed user-friendly interfaces for end-users, security personnel, and administrators, providing real-time monitoring, alert management, and system configuration options.</li>
-                </ul>
-            </p>
-        </div>
-    </section>
+    
+        </section>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>If you'd like to get in touch, you can reach me at:</p>
-        <ul class="Contact_1">
-            <li><a href="https://www.linkedin.com/in/ajit-pawar-3a1854257"><img src="linkedin.png" alt="LinkedIn"></a></li>
-            <li><a href="mailto:pawarajit734@gmail.com"><img src="email.png" alt="Email"></a></li>
-            <li><a href="https://github.com/your-github-username"><img src="github.png" alt="GitHub"></a></li>
-        </ul>
-    </section>
+        <section class="about" id="about">
+            <h2 class="heading">About <span>Me</span></h2>
 
-    <footer>
-        <p>&copy; 2024 Ajit Shankar Pawar. All rights reserved.</p>
-    </footer>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const sections = document.querySelectorAll("section"); // Select all sections
-        
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("visible"); // Add visible class when section is in view
-                        observer.unobserve(entry.target); // Stop observing after adding class
-                    }
-                });
-            }, {
-                threshold: 0.1 // Trigger when 10% of the section is in view
-            });
-        
-            sections.forEach(section => {
-                section.classList.add("section"); // Add section class for styling
-                observer.observe(section); // Start observing each section
-            });
-        });
+            <div class="about-img">
+                <img src="MyPhoto.png" alt="Personal Image">
+                <span class="circle-spin"></span>
+            </div>
 
-        document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault(); // Prevent default link behavior
-        const targetUrl = this.getAttribute('href');
+            <div class="about-content">
+                <h3>Software Engineer.</h3>
+                <p>I am from Kolhapur.I am a passionate and dedicated aspiring Software developer eager to apply my knowledge and skills to real-world projects. With a strong foundation in Python, Java, C Programming, Managing networks and Social activeness I am driven by a curiosity to learn and a commitment to excellence. I thrive in collaborative environments and enjoy solving complex challenges through innovative solutions. Currently seeking opportunities to grow and contribute to impactful projects.</p>
 
-        // Add fade-out class
-        document.getElementById('content').classList.add('fade-out');
+                <div class="btn-box btns">
+                    <a href="#" class="btn">Read More</a>
+                </div>
+            </div>
+        </section>
 
-        // Wait for the transition to finish
-        setTimeout(() => {
-            window.location.href = targetUrl; // Redirect after fade-out
-        }, 500); // Match this duration with your CSS transition duration
-    });
-});
+        <section class="education" id="education">
+            <h2 class="heading">My <span>Jornney</span></h2>
 
-        </script>  
-    </div>      
-</body>
+            <div class="education-row">
+                <div class="education-column">
+                    <h3 class="title">Education</h3>
+
+                    <div class="education-box">
+                        <div class="education-content">
+                            <div class="content">
+                                <div class="year"><i class='bx bxs-calendar' ></i>2019 - 2020</div>
+                                <h3>SSC - Madhyamik Vidhyalay, Nagaon</h3>
+                                <p>I successfully completed my 10th-grade education in the academic year 2019-2020 with an impressive score of 84%. This accomplishment reflects my dedication to academic excellence and my ability to perform consistently under structured learning environments. My performance in 10th grade not only honed my foundational knowledge in core subjects such as Mathematics, Science, and English but also instilled in me a disciplined approach to studies.</p>
+                            </div>
+                        </div>
+
+                        <div class="education-content">
+                            <div class="content">
+                                <div class="year"><i class='bx bxs-calendar' ></i>2021 - 2022</div>
+                                <h3>HSC - S. M. Lohia Jr. Collage, Kolhapur</h3>
+                                <p>I completed my 12th-grade education with a commendable score of 72%, reflecting my strong commitment to academics and my ability to adapt to more advanced and diverse subjects. This phase of my education was pivotal in shaping my critical thinking and problem-solving skills, particularly in areas like Mathematics, Physics.Through this experience, I gained valuable insights into time management, self-discipline, and collaborative learning.</p>
+                            </div>
+                        </div>
+
+                        <div class="education-content">
+                            <div class="content">
+                                <div class="year"><i class='bx bxs-calendar' ></i>2022 - 2026</div>
+                                <h3>Bachelers Degree - DYP</h3>
+                                <p>I am currently pursuing a Bachelor of Technology (B.Tech) in Computer Science Engineering at D.Y. Patil Agriculture and Technical University, Talsande, with a current CGPA of 7.5. This program has provided me with a strong foundation in computer science principles, including programming, algorithms, and system design, as well as exposure to cutting-edge technologies such as artificial intelligence and cloud computing.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="education-column">
+                    <h3 class="title">Projects</h3>
+
+                    <div class="education-box">
+                        <div class="education-content">
+                            <div class="content">
+                                <div class="year"><i class='bx bxs-calendar' ></i>2022 - 20023</div>
+                                <h3>Grid-Based Position Identification Using Spiral Exploration</h3>
+                                <p>The objective was to minimize the steps required for a subject to locate markers within the grid while handling edge cases and ensuring computational efficiency. This experience enhanced my skills in problem-solving, algorithm design, and spatial reasoning.</p>
+                            </div>
+                        </div>
+
+                        <div class="education-content">
+                            <div class="content">
+                                <div class="year"><i class='bx bxs-calendar' ></i>2023 - 2024</div>
+                                <h3>Auto Temperature scan entry system</h3>
+                                <p>The IoT-Based Auto Temperature Scan Entry System is a smart solution for automated temperature screening and access control. This system leverages IoT technology to monitor and record temperatures in real-time, ensuring only individuals within a safe temperature range are granted entry. It is designed to improve safety, streamline entry processes, and support health protocols in various environments.</p>
+                            </div>
+                        </div>
+
+                        <div class="education-content">
+                            <div class="content">
+                                <div class="year"><i class='bx bxs-calendar' ></i>2023 - 2024</div>
+                                <h3>Cafeteria Management System</h3>
+                                <p>The Cafeteria Management System is a comprehensive solution for streamlining cafeteria operations and enhancing customer experience. This system automates order management, inventory tracking, and payment processing, reducing manual errors and improving efficiency. It is designed to facilitate smooth operations in cafeterias by providing real-time data on sales and stock levels, ensuring seamless service for both staff and customers.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills" id="skills">
+            <h2 class="heading">My <span>Skills</span></h2>
+
+            <div class="skills-row">
+                <div class="skills-column">
+                    <h3 class="title">Coding Skills</h3>
+
+                    <div class="skills-box">
+                        <div class="skills-content">
+                            <div class="progress">
+                                <h3>HTML<span>95%</span></h3>
+                                <div class="bar"><span></span></div>
+                            </div>
+                            
+                            <div class="progress">
+                                <h3>PYTHON<span>89%</span></h3>
+                                <div class="bar"><span></span></div>
+                            </div>
+                            
+                            <div class="progress">
+                                <h3>JAVA<span>86%</span></h3>
+                                <div class="bar"><span></span></div>
+                            </div>
+                            
+                            <div class="progress">
+                                <h3>CSS<span>90%</span></h3>
+                                <div class="bar"><span></span></div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-column">
+                    <h3 class="title">Professional Skills</h3>
+
+                    <div class="skills-box">
+                        <div class="skills-content">
+                            <div class="progress">
+                                <h3>Web Design <span>96%</span></h3>
+                                <div class="bar"><span></span></div>
+                            </div>
+                            
+                            <div class="progress">
+                                <h3>Coding <span>97%</span></h3>
+                                <div class="bar"><span></span></div>
+                            </div>
+                            
+                            <div class="progress">
+                                <h3>Web Development <span>90%</span></h3>
+                                <div class="bar"><span></span></div>
+                            </div>
+                            
+                            <div class="progress">
+                                <h3>English Speaking <span>85%</span></h3>
+                                <div class="bar"><span></span></div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <h2 class="heading">Contact <span>Me</span></h2>
+
+            <form action="connect.php" method="POST">
+                <div class="input-box">
+                    <div class="input-field">
+                        <input type="text" placeholder="Full Name" name="fullname" required>
+                        <span class="focus"></span>
+                    </div>
+                    <div class="input-field">
+                        <input type="email" placeholder="Email Address" name="email" required>
+                        <span class="focus"></span>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <div class="input-field">
+                        <input type="text" placeholder="Mobile Number" name="number" required>
+                        <span class="focus"></span>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" placeholder="Email Subject" name="subject" required>
+                        <span class="focus"></span>
+                    </div>
+                </div>
+                <div class="textarea-field">
+                    <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                    <span class="focus"></span>
+                </div>
+                <div class="btn-box btns">
+                    <button type="submit" class="btn">Submit</button>
+                </div>
+            </form>
+            
+        </section>
+
+
+        <footer class="footer">
+            <div class="footer-text">
+                <p>© 2024 Ajit Shankar Pawar. All rights reserved.</p>
+            </div>
+
+            <div class="footer-iconTop">
+                <a href="#"><i class='bx bx-up-arrow-alt' ></i></a>
+            </div>
+        </footer>
+
+
+        <script src="script.js"></script>
+    </body>
 </html>
