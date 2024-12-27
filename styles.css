@@ -754,6 +754,10 @@ span{
         display: block;
     }
 
+    .home-image{
+        display: none;
+    }
+
     .navbar{
         position: absolute;
         top: 100%;
