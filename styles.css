@@ -576,89 +576,14 @@ span{
     width: 85%;
 }
 
-.contact {
-    min-height: auto;
-    padding-bottom: 7rem;
-}
-
-.contact form {
-    max-width: 70rem;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.contact form .input-box {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.contact form .input-box .input-field {
-    position: relative;
-    width: 49%;
-    margin: .8rem 0;
-}
-
-.contact form .input-box .input-field input, 
-.contact form .textarea-field textarea{
-    width: 100%;
-    height: 100%;
-    padding: 1.5rem;
-    font-size: 1.6rem;
-    color: var(--text-color);
-    background: transparent;
-    border-radius: .6rem;
-    border: .2rem solid var(--main-color);
-}
-
-.contact form .input-box .input-field input::placeholder, 
-.contact form .textarea-field textarea::placeholder{
-    color: var(--text-color);
-}
-
-.contact form .focus {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: var(--second-bg-color);
-    border-radius: .6rem;
-    z-index: -1;
-    transition: .5s;
-}
-
-.contact form .input-box .input-field input:focus~.focus,
-.contact form .input-box .input-field input:valid~.focus {
-    width: 100%;
-}
-
-.contact form .textarea-field{
-    position: relative;
-    margin: .8rem 0 2.7rem;
-    display: flex;
-}
-
-.contact form .textarea-field textarea{
-    resize: none;
-}
-
-.contact form .btn-box.btns .btn {
-    font-size: 3rem;
-    color: var(--main-color);
-    background: var(--bg-color);
-    width: auto;
-    height: auto;
-}
 
 .footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    padding: 2rem 9%;
-    background: var(--second-bg-color);
+    padding: 1rem 9%;
+    background: var(--bg-color);
 }
 
 .footer-text p{
@@ -670,9 +595,9 @@ span{
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    padding: .8rem;
+    padding: .7rem;
     background: var(--main-color);
-    border: .2rem solid var(--main-color);
+    border: .1rem solid var(--main-color);
     border-radius: .6rem;
     z-index: 1;
     overflow: hidden;
@@ -837,10 +762,6 @@ span{
 
     .education{
         padding: 10rem 4% 5rem 5%;
-    }
-
-    .contact form .input-box .input-field{
-        width: 100%;
     }
 
     .footer{
