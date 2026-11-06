@@ -1,216 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Personal Portfolio Website HTML CSS and JavaScript only</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Ajit Pawar | Mobile Application Developer</title>
+    <meta name="description"
+        content="Portfolio of Ajit Pawar, a mobile application developer from Kolhapur, India. Android, IoT and algorithm projects.">
+    <meta property="og:title" content="Ajit Pawar | Mobile Application Developer">
+    <meta property="og:description" content="Android, IoT and algorithm projects by Ajit Pawar.">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#090909">
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23090909'/%3E%3Ctext x='32' y='43' font-size='30' text-anchor='middle' fill='%23cdff00' font-family='Arial' font-weight='700'%3EAP%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@600&family=Manrope:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <script>document.documentElement.classList.add('js')</script>
     <link rel="stylesheet" href="styles.css">
-
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
-    <body>
-        <header class="header" id="header">
-            <a href="#" class="logo">Ajit Pawar.<span class="animate" style="--i:1;"></span></a>
-
-            <div class="bx bx-menu" id="menu-icon" style="display: none;"><span class="animate" style="--i:2;"></span></div>
-
-            <nav class="navbar">
-                <a href="#home" class="active">Home</a>
-                <a href="#about">About</a>
-                <a href="#education">Education</a>
-                <a href="#skills">Skills</a>
-
-                <span class="active-nav"></span>
-                <span class="animate" style="--i:2;"></span>
+<body>
+    <div id="bar" aria-hidden="true"></div>
+    <header>
+        <div class="wrap nav">
+            <a class="logo" href="#top">Ajit<span>.</span>Pawar</a>
+            <nav id="nav" aria-label="Main">
+                <a href="#work">Work</a><a href="#about">About</a><a href="#journey">Journey</a><a
+                    href="#contact">Contact</a>
             </nav>
-        </header>
-        <section class="home" id="home">
-            <div class="home-content" id="home-content">
-                <h1>Hi, I'm <span>Ajit Pawar</span></h1>
-                <div class="text-animate" id="text-animate">
-                    <h3>Software Engineer</h3>
-                </div>
-
-                <p>Passionate about reading and staying updated on defense news.Avoid politics,a deep interest in global military affairs and defense technology.Strong passion for Technology and emerging tech trends.</p>
-                <div class="btn-box">
-                    <a href="mailto:pawarajit734@gmail.com">Hire me</a>
-                    <a href="https://wa.me/9130861778?text=Hello,">Let's Talk</a>
-                </div>
-            </div>
-
-            <div class="home-image">
-                <img src="MyPhoto.png" alt="Personal Image">
-            </div>
-            
-        <div class="home-sci">
-            <a href="https://www.linkedin.com/in/ajit-pawar-3a1854257"><i class='bx bxl-linkedin'></i></a>
-            <a href="https://drive.google.com/file/d/1gmDIjNLaBAJebvBe17UrGyqUoKApqJH4/view?usp=sharing"><i class='bx bxs-download'></i></a>
-            <a href="https://github.com/AjitPawar01"><i class='bx bxl-github' ></i></a>
+            <button class="btn" id="menu" aria-expanded="false" aria-controls="nav" type="button">Menu</button>
         </div>
-    
-        </section>
+    </header>
 
-        <section class="about" id="about">
-            <h2 class="heading">About <span>Me</span></h2>
-
-            <div class="about-img">
-                <img src="MyPhoto.png" alt="Personal Image">
-                <span class="circle-spin"></span>
-            </div>
-
-            <div class="about-content">
-                <h3>Software Engineer.</h3>
-                <p>I'm a diligent and goal-oriented student of Computer Science Engineering with a keen interest in web technologies, software development, and emerging technological trends. I have a good base in Python, Java, C# dotnet and C and have a special interest in applying HTML, CSS, JavaScript, and ReactJS to design user-friendly, responsive web applications. I am at the moment gaining further insight into full-stack technologies such as the MERN stack and backend development. I like teamwork and developing innovative solutions to everyday problems. To enhance my learning and prepare for a successful career in technology, I seek opportunities actively to apply what I know in real-world projects, internships, and team challenges.</p>
-
-                <div class="btn-box btns">
-                    <a href="#" class="btn">Read More</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="education" id="education">
-            <h2 class="heading">My <span>Journey</span></h2>
-
-            <div class="education-row">
-                <div class="education-column">
-                    <h3 class="title">Education</h3>
-
-                    <div class="education-box">
-                        <div class="education-content">
-                            <div class="content">
-                                <div class="year"><i class='bx bxs-calendar' ></i>2019 - 2020</div>
-                                <h3>SSC - Madhyamik Vidhyalay, Nagaon</h3>
-                                <p>I successfully completed my 10th-grade education in the academic year 2019-2020 with an impressive score of 84%. This accomplishment reflects my dedication to academic excellence and my ability to perform consistently under structured learning environments. My performance in 10th grade not only honed my foundational knowledge in core subjects such as Mathematics, Science, and English but also instilled in me a disciplined approach to studies.</p>
-                            </div>
-                        </div>
-
-                        <div class="education-content">
-                            <div class="content">
-                                <div class="year"><i class='bx bxs-calendar' ></i>2021 - 2022</div>
-                                <h3>HSC - S. M. Lohia Jr. Collage, Kolhapur</h3>
-                                <p>I completed my 12th-grade education with a commendable score of 72%, reflecting my strong commitment to academics and my ability to adapt to more advanced and diverse subjects. This phase of my education was pivotal in shaping my critical thinking and problem-solving skills, particularly in areas like Mathematics, Physics.Through this experience, I gained valuable insights into time management, self-discipline, and collaborative learning.</p>
-                            </div>
-                        </div>
-
-                        <div class="education-content">
-                            <div class="content">
-                                <div class="year"><i class='bx bxs-calendar' ></i>2022 - 2026</div>
-                                <h3>Bachelor's Degree - DYP</h3>
-                                <p>I am currently pursuing a Bachelor of Technology (B.Tech) in Computer Science Engineering at D.Y. Patil Agriculture and Technical University, Talsande, with a current CGPA of 7.5. This program has provided me with a strong foundation in computer science principles, including programming, algorithms, and system design, as well as exposure to cutting-edge technologies such as artificial intelligence and cloud computing.</p>
-                            </div>
-                        </div>
+    <main id="top">
+        <section class="hero">
+            <div class="wrap hero-grid">
+                <div>
+                    <div class="kicker rv"><span>Mobile Application Developer</span><b>Open to
+                            collaborations</b><span>Kolhapur, India</span></div>
+                    <h1>Ajit <br><span class="acc">Pawar</span></h1>
+                    <span class="hand rv" id="hand">mobile apps, built with care</span>
+                    <p class="rv">Computer Science Engineering graduate passionate about developing Android and
+                        cross-platform mobile applications using React Native, Java and Kotlin. Focused on
+                        building efficient, user-friendly applications and continuously expanding my technical skills
+                        through hands-on development. Open to exciting opportunities, collaborative projects, and
+                        professional growth.</p>
+                    <div class="cta rv">
+                        <a class="btn p" href="#work">View work</a>
+                        <a class="btn" href="#contact">Contact</a>
+                        <a class="btn" data-link="resume" target="_blank" rel="noopener noreferrer">Resume</a>
                     </div>
                 </div>
-
-                <div class="education-column">
-                    <h3 class="title">Projects</h3>
-
-                    <div class="education-box">
-                        <div class="education-content">
-                            <div class="content">
-                                <div class="year"><i class='bx bxs-calendar' ></i>2024 - 20025</div>
-                                <h3>Company Expenses Tracker Application(JAVA)</h3>
-                                <p>The Company Expenses Tracker is an Android application designed to simplify and manage company expense tracking efficiently. Built using Java for the frontend and Google Firebase as the backend, it enables real-time data synchronization, secure authentication, and cloud-based data storage.A cloud-powered expense tracker that enables companies to record, calculate, and view financial data securely using Firebase backend.</p>
-                            </div>
-                        </div>
-
-                        <div class="education-content">
-                            <div class="content">
-                                <div class="year"><i class='bx bxs-calendar' ></i>2023 - 2024</div>
-                                <h3>Auto Temperature scan entry system</h3>
-                                <p>The IoT-Based Auto Temperature Scan Entry System is a smart solution for automated temperature screening and access control. This system leverages IoT technology to monitor and record temperatures in real-time, ensuring only individuals within a safe temperature range are granted entry. It is designed to improve safety, streamline entry processes, and support health protocols in various environments.</p>
-                            </div>
-                        </div>
-
-                        <div class="education-content">
-                            <div class="content">
-                                <div class="year"><i class='bx bxs-calendar' ></i>2023 - 2024</div>
-                                <h3>Grid-Based Position Identification Using Spiral Exploration</h3>
-                                <p>The objective was to minimize the steps required for a subject to locate markers within the grid while handling edge cases and ensuring computational efficiency. This experience enhanced my skills in problem-solving, algorithm design, and spatial reasoning.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <!-- <img class="pic rv" src="MyPhoto.png" alt="Portrait of Ajit Pawar" width="480" height="600"
+                    onerror="this.closest('.hero-grid').style.gridTemplateColumns='1fr';this.remove()"> -->
             </div>
         </section>
 
-        <section class="skills" id="skills">
-            <h2 class="heading">My <span>Skills</span></h2>
+        <div class="marquee" aria-hidden="true">
+            <div id="mq"></div>
+        </div>
 
-            <div class="skills-row">
-                <div class="skills-column">
-                    <div class="skills-box">
-                        <div class="skills-content">
-                            <div class="progress">
-                                <h3>JAVA<span>95%</span></h3>
-                                <div class="bar"><span></span></div>
-                            </div>
-                            
-                            <div class="progress">
-                                <h3>PYTHON<span>89%</span></h3>
-                                <div class="bar"><span></span></div>
-                            </div>
-                            
-                            <div class="progress">
-                                <h3>KOTLIN<span>86%</span></h3>
-                                <div class="bar"><span></span></div>
-                            </div>
-                            
-                            <div class="progress">
-                                <h3>DART<span>78%</span></h3>
-                                <div class="bar"><span></span></div>
-                            </div>
-                            
-                        </div>
-                    </div>
+        <section class="statement">
+            <div class="wrap">
+                <p id="stm">From <b>Android apps</b> to <b>IoT systems</b> and <b>algorithms</b>, I turn everyday
+                    problems into <b>working software</b>.</p>
+            </div>
+        </section>
+
+        <section id="work" class="hs">
+            <div class="hs-pin">
+                <div class="wrap">
+                    <h2 class="rv">Selected <em>work</em></h2>
+                    <div class="tools rv" id="chips" role="group" aria-label="Filter projects"></div>
                 </div>
+                <div class="hs-view">
+                    <div class="grid" id="grid"></div>
+                </div>
+                <p id="empty" class="wrap" hidden>No projects match. Try another filter or search.</p>
+                <div class="wrap hs-bar" aria-hidden="true"><i id="hsb"></i></div>
+            </div>
+        </section>
 
-                <div class="skills-column">
-                    <div class="skills-box">
-                        <div class="skills-content">
-                            <div class="progress">
-                                <h3>Android Development<span>97%</span></h3>
-                                <div class="bar"><span></span></div>
-                            </div>
-                            
-                            <div class="progress">
-                                <h3>Full Stack Web Development(MERN)<span>96%</span></h3>
-                                <div class="bar"><span></span></div>
-                            </div>
-                            
-                            <div class="progress">
-                                <h3>Generative AI Prompt Design<span>90%</span></h3>
-                                <div class="bar"><span></span></div>
-                            </div>
-                            
-                            <div class="progress">
-                                <h3>AI Tool Utilization<span>85%</span></h3>
-                                <div class="bar"><span></span></div>
-                            </div>
-                            
-                        </div>
-                    </div>
+        <section id="about">
+            <div class="wrap two">
+                <div>
+                    <h2 class="rv">About <em>me</em></h2>
+                    <p class="rv">I'm a Computer Science Engineering student passionate about building mobile and web
+                        applications. I have a strong foundation in Java, Python, C#, and C, along with experience using
+                        HTML, CSS, JavaScript, and ReactJS to create responsive and user-friendly interfaces.</p>
+                    <p class="rv">I'm continuously expanding my skills in full-stack development, particularly with the
+                        MERN stack. I enjoy collaborating with others, solving real-world problems, and turning ideas
+                        into practical software solutions. I'm always looking for opportunities to apply my skills, gain
+                        hands-on experience, and grow as a developer. Beyond technology, I have a keen interest in
+                        defence news and emerging technologies.</p>
+                </div>
+                <div class="rv">
+                    <h4>Languages</h4>
+                    <ul class="tags">
+                        <li>Java</li>
+                        <li>Kotlin</li>
+                        <li>TypeScript</li>
+                        <li>Python</li>
+                        <li>C</li>
+                        <li>C#</li>
+                        <li>JavaScript</li>
+                    </ul>
+                    <h4>Focus areas</h4>
+                    <ul class="tags">
+                        <li>Android development</li>
+                        <li>IOS development</li>
+                        <li>React Native</li>
+                        <li>Full-stack web development</li>
+                        <li>Retrofit</li>
+                        <li>Version Control (Git)</li>
+                        <li>Firebase</li>
+                        <li>Generative AI prompt design</li>
+                        <li>AI tool utilization</li>
+                        <li>Android Studio</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        
-        <footer class="footer">
-            <div class="footer-text">
-                <p>© 2025 Ajit Shankar Pawar. All rights reserved.</p>
+        <section id="journey">
+            <div class="wrap">
+                <h2 class="rv">My <em>journey</em></h2>
+                <div class="rv" id="edu"></div>
             </div>
+        </section>
 
-            <div class="footer-iconTop">
-                <a href="#"><i class='bx bx-up-arrow-alt' ></i></a>
+        <div class="marquee rev" aria-hidden="true">
+            <div id="mq2"></div>
+        </div>
+
+        <section id="contact">
+            <div class="wrap two">
+                <div class="rv">
+                    <h2>Let's <em>talk</em></h2>
+                    <a class="mail" id="mail"></a>
+                    <div class="links">
+                        <a class="btn p" id="wa" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                        <a class="btn" data-link="linkedin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        <a class="btn" data-link="github" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </div>
+                </div>
+                <form class="rv" id="f">
+                    <label>Name<input name="n" required autocomplete="name"></label>
+                    <label>Email<input name="e" type="email" required autocomplete="email"></label>
+                    <label>Message<textarea name="m" required></textarea></label>
+                    <button class="btn p" type="submit">Write email</button>
+                    <p id="st" role="status"></p>
+                </form>
             </div>
-        </footer>
+        </section>
+    </main>
 
+    <footer>
+        <div class="wrap">
+            <p class="big rv">Let’s build<br><span>something.</span></p>
+        </div>
+        <div class="wrap"><span>© <span id="yr"></span> Ajit Shankar Pawar</span><a href="#top">Back to top ↑</a></div>
+    </footer>
 
-        <script src="script.js"></script>
-    </body>
+    <dialog id="dlg" aria-labelledby="dt">
+        <button class="btn x" id="dx" type="button">Close</button>
+        <div id="dbody"></div>
+    </dialog>
+
+    <script src="script.js"></script>
+</body>
+
 </html>
-
-
-
